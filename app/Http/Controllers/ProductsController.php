@@ -97,7 +97,7 @@ class ProductsController extends Controller
                 $imageName,
                 'public'
             );
-            $product->image = $imagePath;
+            $product->image_url = $imagePath;
         }
 
         $product->save();

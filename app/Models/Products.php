@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Products extends Model
 {
-    use hasFactory;
+    use HasFactory;
+
     protected $table = 'products';
+
+    // Menambahkan properti $fillable
+    protected $fillable = [
+        'name', 'slug', 'description', 'sku', 'price', 'stock', 'product_category_id', 'is_active', 'image_url'
+    ];
 
     public function category()
     {
